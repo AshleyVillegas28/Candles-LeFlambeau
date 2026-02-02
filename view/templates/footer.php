@@ -1,31 +1,34 @@
-<!-- parte final del documento-->
-<footer class="footer">
-    <div class="row">
-        <div class="col-sm-4 d-flex flex-column">
-            <a href="http://www.facebook.com/">Facebook</a>
-            <a href="http://www.twitter.com/">Twitter</a>
-            <a href="http://www.instagram.com/">Instagram</a>
-            <a href="http://www.google.com/">Google+</a>
+</main>
+
+<footer class="footer bg-light pt-4 mt-5">
+    <div class="row justify-content-center text-center align-items-center">
+
+        <div class="col-md-6 mb-3">
+            <h5 class="fw-bold mb-3">Síguenos</h5>
+            <div class="d-flex justify-content-center gap-3">
+                <a href="https://www.facebook.com" class="footer-icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.twitter.com" class="footer-icon"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com" class="footer-icon"><i class="fab fa-instagram"></i></a>
+            </div>
         </div>
 
-        <div class="col-sm-4 d-flex flex-column align-items-center">
-            <address>
-                <h3>Le Flambeau</h3>
-                <p>Guayaquil, Ecuador</p>
-                <p> <a href="tel:+593 0963896547">593-0963896547</a></p>
-                <p> <a href="mailto: abc@example.com">abc@example.com</a></p>
-            </address>
+        <div class="col-md-6 mb-3">
+            <h4 class="fw-bold">Le Flambeau</h4>
+            <p class="mb-1">Guayaquil, Ecuador</p>
+            <p class="mb-1">
+                <i class="fas fa-phone"></i>
+                <a href="tel:+593963896547">+593 963 896 547</a>
+            </p>
+            <p>
+                <i class="fas fa-envelope"></i>
+                <a href="mailto:abc@example.com">abc@example.com</a>
+            </p>
         </div>
-    </div>
-    <div>
-        <p class="text-center"> Copyright © <?php echo date('Y'); ?> Mi tienda. Todos los derechos reservados</p>
+
     </div>
 </footer>
 
-<!-- Bootstrap JS -->
 <script src="assets/js/bootstrap.min.js"></script>
-
-
 </body>
 
 </html>

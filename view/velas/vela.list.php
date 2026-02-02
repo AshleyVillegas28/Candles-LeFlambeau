@@ -5,7 +5,7 @@
 
     <div class="row">
         <div class="col-sm-6">
-            <form action="index.php?c=velas&f=search" method="POST" class="form-inline">
+            <form action="index.php?c=vela&f=search" method="POST" class="form-inline">
                 <input type="text" name="b" id="busqueda" class="form-control mr-2" placeholder="buscar…">
                 <button type="submit" class="btn btn-primary">
                     <i class="fas fa-search"></i> Buscar
@@ -14,7 +14,7 @@
         </div>
 
         <div class="col-sm-6 d-flex flex-column align-items-end">
-            <a href="index.php?c=velas&f=view_new">
+            <a href="index.php?c=vela&f=view_new">
                 <button type="button" class="btn btn-primary">
                     <i class="fas fa-plus"></i> Nuevo
                 </button>
@@ -51,12 +51,12 @@
                         <td><?php echo htmlspecialchars($fila['categoria'] ?? 'Sin categoría'); ?></td>
                         <td class="d-flex justify-content-center gap-2">
                             <a class="btn btn-primary"
-                                href="index.php?c=velas&f=view_edit&id_vela=<?php echo $fila['id_vela']; ?>">
+                                href="index.php?c=vela&f=view_edit&id_vela=<?php echo $fila['id_vela']; ?>">
                                 Editar
                             </a>
 
                             <a class="btn btn-danger" onclick="return confirm('¿Está seguro de eliminar esta vela?');"
-                                href="index.php?c=velas&f=delete&id_vela=<?php echo $fila['id_vela']; ?>">
+                                href="index.php?c=vela&f=delete&id_vela=<?php echo $fila['id_vela']; ?>">
                                 Eliminar
                             </a>
                         </td>
@@ -72,3 +72,5 @@
         </div>
     </div>
 </div>
+
+<?php require_once FOOTER; ?>

@@ -33,14 +33,6 @@ CREATE TABLE `categorias` (
   `descripcion` text COLLATE utf8mb3_spanish_ci
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_spanish_ci;
 
---
--- Volcado de datos para la tabla `categorias`
---
-
-INSERT INTO `categorias` (`id_categoria`, `nombre`, `descripcion`) VALUES
-(11, 'Aromáticas ', 'Velas con diferentes aromas para ambientar'),
-(13, 'Antimosquitos ', 'Velas especiales para repeler mosquitos');
-
 -- --------------------------------------------------------
 
 --

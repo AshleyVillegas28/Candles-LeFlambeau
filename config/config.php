@@ -1,4 +1,6 @@
 <?php
+//Ruta base
+define('BASE_URL', '/MVC-PHP/');
 
 //controlador y funcion predefinida
 define("CONTROLADOR_PRINCIPAL","index");
