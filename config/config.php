@@ -4,7 +4,7 @@ define('DB_HOST', 'db'); // Docker
 // define('DB_HOST', 'localhost'); // XAMPP
 
 //Ruta base
-define('BASE_URL', '/MVC-PHP/');
+define('BASE_URL', 'http://localhost:8000/');
 
 //controlador y funcion predefinida
 define("CONTROLADOR_PRINCIPAL","index");
