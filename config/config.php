@@ -1,24 +1,29 @@
 <?php
 
-define('DB_HOST', 'db'); // Docker
-// define('DB_HOST', 'localhost'); // XAMPP
+// ------------------------
+// Base de datos
+// ------------------------
+define('DB_HOST', getenv('DB_HOST') ?: 'db');
+define('DBNAME', getenv('DB_DATABASE') ?: 'CandlesYou_db');
+define('DBUSER', getenv('DB_USER') ?: 'user');
+define('DBPASSWORD', getenv('DB_PASSWORD') ?: 'user');
 
-//Ruta base
-define('BASE_URL', 'http://localhost:8000/');
+// ------------------------
+// Ruta base
+// ------------------------
+define('BASE_URL', getenv('BASE_URL') ?: 'http://localhost:8000/');
 
-//controlador y funcion predefinida
+// ------------------------
+// Controlador y función predeterminada
+// ------------------------
 define("CONTROLADOR_PRINCIPAL","index");
 define("FUNCION_PRINCIPAL", "index");
 
-//ruta de templates
+// ------------------------
+// Rutas de templates y vistas
+// ------------------------
 define("HEADER", 'view/templates/header.php');
 define("FOOTER", 'view/templates/footer.php');
 
-// ruta de vistas modulo productos
 define("VVELAS", "view/velas/vela.");
 define("VCATEGORIAS", "view/categorias/categoria.");
-
-// conexion bb
-define("DBNAME","CandlesYou_db");
-define("DBUSER","user");
-define("DBPASSWORD","user");
