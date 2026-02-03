@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost
--- Tiempo de generación: 02-02-2026 a las 00:00:46
+-- Tiempo de generación: 03-02-2026 a las 00:56:00
 -- Versión del servidor: 8.0.44
 -- Versión de PHP: 8.2.12
 
@@ -76,13 +76,13 @@ ALTER TABLE `velas`
 -- AUTO_INCREMENT de la tabla `categorias`
 --
 ALTER TABLE `categorias`
-  MODIFY `id_categoria` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id_categoria` int NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `velas`
 --
 ALTER TABLE `velas`
-  MODIFY `id_vela` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_vela` int NOT NULL AUTO_INCREMENT;
 
 --
 -- Restricciones para tablas volcadas

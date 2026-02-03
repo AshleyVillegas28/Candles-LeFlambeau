@@ -1,4 +1,8 @@
 <?php
+
+define('DB_HOST', 'db'); // Docker
+// define('DB_HOST', 'localhost'); // XAMPP
+
 //Ruta base
 define('BASE_URL', '/MVC-PHP/');
 
@@ -15,6 +19,6 @@ define("VVELAS", "view/velas/vela.");
 define("VCATEGORIAS", "view/categorias/categoria.");
 
 // conexion bb
-define("DBNAME","mvc_candles");
-define("DBUSER","root");
-define("DBPASSWORD","");
+define("DBNAME","CandlesYou_db");
+define("DBUSER","user");
+define("DBPASSWORD","user");
