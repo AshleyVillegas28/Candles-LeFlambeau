@@ -23,7 +23,7 @@ class VelasDAO
 
             $stmt = $this->con->prepare($sql);
             $param = '%' . $param . '%';
-            $stmt->bindParam(":b", $param, PDO::PARAM_STR);
+            $stmt->bindValue(":b", $param, PDO::PARAM_STR);
             $stmt->execute();
 
             return $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -38,7 +38,7 @@ class VelasDAO
         try {
             $sql = "SELECT * FROM velas WHERE id_vela = :id";
             $stmt = $this->con->prepare($sql);
-            $stmt->bindParam(":id", $id_vela, PDO::PARAM_INT);
+            $stmt->bindValue(":id", $id_vela, PDO::PARAM_INT);
             $stmt->execute();
 
             $res = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -58,13 +58,13 @@ class VelasDAO
                         (:nombre, :descripcion, :precio, :stock, :aroma, :color, :id_categoria)";
 
             $stmt = $this->con->prepare($sql);
-            $stmt->bindParam(":nombre", $vela->getNombre());
-            $stmt->bindParam(":descripcion", $vela->getDescripcion());
-            $stmt->bindParam(":precio", $vela->getPrecio());
-            $stmt->bindParam(":stock", $vela->getStock(), PDO::PARAM_INT);
-            $stmt->bindParam(":aroma", $vela->getAroma());
-            $stmt->bindParam(":color", $vela->getColor());
-            $stmt->bindParam(":id_categoria", $vela->getId_categoria(), PDO::PARAM_INT);
+            $stmt->bindValue(":nombre", $vela->getNombre());
+            $stmt->bindValue(":descripcion", $vela->getDescripcion());
+            $stmt->bindValue(":precio", $vela->getPrecio());
+            $stmt->bindValue(":stock", $vela->getStock(), PDO::PARAM_INT);
+            $stmt->bindValue(":aroma", $vela->getAroma());
+            $stmt->bindValue(":color", $vela->getColor());
+            $stmt->bindValue(":id_categoria", $vela->getId_categoria(), PDO::PARAM_INT);
 
             return $stmt->execute();
         } catch (PDOException $e) {
@@ -87,14 +87,14 @@ class VelasDAO
                     WHERE id_vela = :id";
 
             $stmt = $this->con->prepare($sql);
-            $stmt->bindParam(":nombre", $vela->getNombre());
-            $stmt->bindParam(":descripcion", $vela->getDescripcion());
-            $stmt->bindParam(":precio", $vela->getPrecio());
-            $stmt->bindParam(":stock", $vela->getStock(), PDO::PARAM_INT);
-            $stmt->bindParam(":aroma", $vela->getAroma());
-            $stmt->bindParam(":color", $vela->getColor());
-            $stmt->bindParam(":id_categoria", $vela->getId_categoria(), PDO::PARAM_INT);
-            $stmt->bindParam(":id", $vela->getId_vela(), PDO::PARAM_INT);
+            $stmt->bindValue(":nombre", $vela->getNombre());
+            $stmt->bindValue(":descripcion", $vela->getDescripcion());
+            $stmt->bindValue(":precio", $vela->getPrecio());
+            $stmt->bindValue(":stock", $vela->getStock(), PDO::PARAM_INT);
+            $stmt->bindValue(":aroma", $vela->getAroma());
+            $stmt->bindValue(":color", $vela->getColor());
+            $stmt->bindValue(":id_categoria", $vela->getId_categoria(), PDO::PARAM_INT);
+            $stmt->bindValue(":id", $vela->getId_vela(), PDO::PARAM_INT);
 
             return $stmt->execute();
         } catch (PDOException $e) {
@@ -108,7 +108,7 @@ class VelasDAO
         try {
             $sql = "DELETE FROM velas WHERE id_vela = :id";
             $stmt = $this->con->prepare($sql);
-            $stmt->bindParam(":id", $id_vela, PDO::PARAM_INT);
+            $stmt->bindValue(":id", $id_vela, PDO::PARAM_INT);
             return $stmt->execute();
         } catch (PDOException $e) {
             error_log("Error en delete de VelaDAO: " . $e->getMessage());

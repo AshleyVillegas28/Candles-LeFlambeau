@@ -21,7 +21,7 @@ class CategoriaDAO
 
             $stmt = $this->con->prepare($sql);
             $param = '%' . $param . '%';
-            $stmt->bindParam(":b", $param, PDO::PARAM_STR);
+            $stmt->bindValue(":b", $param, PDO::PARAM_STR);
             $stmt->execute();
 
             return $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -36,7 +36,7 @@ class CategoriaDAO
         try {
             $sql = "SELECT * FROM categorias WHERE id_categoria = :id";
             $stmt = $this->con->prepare($sql);
-            $stmt->bindParam(":id", $id_categoria, PDO::PARAM_INT);
+            $stmt->bindValue(":id", $id_categoria, PDO::PARAM_INT);
             $stmt->execute();
 
             $res = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -54,8 +54,8 @@ class CategoriaDAO
                     VALUES (:nombre, :descripcion)";
 
             $stmt = $this->con->prepare($sql);
-            $stmt->bindParam(":nombre", $categoria->getNombre(), PDO::PARAM_STR);
-            $stmt->bindParam(":descripcion", $categoria->getDescripcion(), PDO::PARAM_STR);
+            $stmt->bindValue(":nombre", $categoria->getNombre(), PDO::PARAM_STR);
+            $stmt->bindValue(":descripcion", $categoria->getDescripcion(), PDO::PARAM_STR);
 
             return $stmt->execute();
         } catch (PDOException $e) {
@@ -73,9 +73,9 @@ class CategoriaDAO
                     WHERE id_categoria = :id";
 
             $stmt = $this->con->prepare($sql);
-            $stmt->bindParam(":nombre", $categoria->getNombre(), PDO::PARAM_STR);
-            $stmt->bindParam(":descripcion", $categoria->getDescripcion(), PDO::PARAM_STR);
-            $stmt->bindParam(":id", $categoria->getId_categoria(), PDO::PARAM_INT);
+            $stmt->bindValue(":nombre", $categoria->getNombre(), PDO::PARAM_STR);
+            $stmt->bindValue(":descripcion", $categoria->getDescripcion(), PDO::PARAM_STR);
+            $stmt->bindValue(":id", $categoria->getId_categoria(), PDO::PARAM_INT);
 
             return $stmt->execute();
         } catch (PDOException $e) {
@@ -89,7 +89,7 @@ class CategoriaDAO
         try {
             $sql = "DELETE FROM categorias WHERE id_categoria = :id";
             $stmt = $this->con->prepare($sql);
-            $stmt->bindParam(":id", $id_categoria, PDO::PARAM_INT);
+            $stmt->bindValue(":id", $id_categoria, PDO::PARAM_INT);
             return $stmt->execute();
         } catch (PDOException $e) {
             error_log("Error en delete de CategoriaDAO: " . $e->getMessage());
