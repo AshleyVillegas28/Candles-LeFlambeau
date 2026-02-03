@@ -1,7 +1,7 @@
 <?php
 
 // Base de datos
-define('DB_HOST', getenv('DB_HOST') ?: 'db');
+define('DB_HOST', getenv('DB_HOST') ?: 'mvc_mysql');
 define('DBNAME', getenv('DB_DATABASE') ?: 'CandlesYou_db');
 define('DBUSER', getenv('DB_USER') ?: 'user');
 define('DBPASSWORD', getenv('DB_PASSWORD') ?: 'user');
