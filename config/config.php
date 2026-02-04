@@ -1,11 +1,11 @@
 <?php
 
 // Base de datos
-define('DB_HOST', getenv('DB_HOST') ?: 'bue7uxydn0p1pbb45knd-mysql.services.clever-cloud.com');
-define('DBNAME', getenv('DBNAME') ?: 'bue7uxydn0p1pbb45knd');
-define('DB_USER', getenv('DB_USER') ?: 'uefxmppat3v0f3im');
-define('DB_PASS', getenv('DB_PASS') ?: 'RtKaOQ9IoetYXLuaSIYi');
+define('DB_HOST', getenv('DB_HOST') ?: 'db');
 define('DB_PORT', getenv('DB_PORT') ?: '3306');
+define('DBNAME', getenv('DB_NAME') ?: 'CandlesYou_db');
+define('DBUSER', getenv('DB_USER') ?: 'user');
+define('DBPASSWORD', getenv('DB_PASS') ?: 'user');
 
 // Ruta base
 define('BASE_URL', getenv('BASE_URL') ?: 'http://localhost:8000/');
