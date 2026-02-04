@@ -1,9 +1,12 @@
-<?php require_once HEADER; ?>
+<?php
+    $pageId = 'home';
+    require_once HEADER;
+?>
 
-<div class="container p-5 mt-3">
+<div class="container p-5 mt-3 home-content">
 
     <!-- Encabezado -->
-    <div class="jumbotron text-center bg-light p-5 rounded shadow">
+    <div class="jumbotron text-center bg-light p-5 rounded shadow home-hero">
         <h1 class="display-4">Le Flambeau</h1>
         <p class="lead">Velas artesanales con aromas únicos y naturales</p>
     </div>
