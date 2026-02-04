@@ -5,7 +5,6 @@ header("Content-Type: application/json");
 require_once '../model/dao/CategoriaDAO.php';
 
 $dao = new CategoriaDAO();
-
 $method = $_SERVER['REQUEST_METHOD'];
 
 switch ($method) {
@@ -25,4 +24,10 @@ switch ($method) {
             "success" => $dao->insert($cat)
         ]);
         break;
+
+    default:
+        http_response_code(405);
+        echo json_encode(["error" => "Método no permitido"]);
+        break;
 }
+?>
