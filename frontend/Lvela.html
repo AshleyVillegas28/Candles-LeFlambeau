@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Categorías | Candles_Le Flambeau</title>
+  <title>Velas | Candles_Le Flambeau</title>
   <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
   <link href="../assets/css/styles.css" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" crossorigin="anonymous">
@@ -26,32 +25,34 @@
   </nav>
 
   <main class="container" style="padding-top: 90px;">
-    <h2 class="mb-4">Lista de Categorías</h2>
-    <div class="row">
-      <div class="col-sm-6">
-        <input type="text" id="busqueda" class="form-control mb-2" placeholder="buscar…">
-        <button id="btnBuscar" class="btn btn-primary mb-3"><i class="fas fa-search"></i> Buscar</button>
+    <h2 class="mb-4">Lista de Velas</h2>
+    <div class="row mb-3 align-items-center">
+      <div class="col-md-6 d-flex">
+        <input type="text" id="busqueda" class="form-control me-2" placeholder="buscar...">
+        <button id="btnBuscar" class="btn btn-primary"> <i class="fas fa-search"></i> Buscar</button>
       </div>
-      <div class="col-sm-6 d-flex flex-column align-items-end">
-        <a href="Ccategoria.html">
-          <button type="button" class="btn btn-primary mb-3">
-            <i class="fas fa-plus"></i> Nuevo
-          </button>
-        </a>
+      <div class="col-md-6 text-end">
+        <a href="Cvela.html" class="btn btn-primary"><i class="fas fa-plus"></i> Nuevo</a>
       </div>
     </div>
-    <div class="table-responsive mt-2">
+
+    <div class="table-responsive">
       <table class="table table-striped table-bordered">
         <thead class="thead-dark">
           <tr>
             <th>ID</th>
             <th>Nombre</th>
             <th>Descripción</th>
+            <th>Precio</th>
+            <th>Stock</th>
+            <th>Aroma</th>
+            <th>Color</th>
+            <th>Categoría</th>
             <th>Acciones</th>
           </tr>
         </thead>
-        <tbody id="tablaCategorias" class="tabladatos">
-          <!-- Las filas se llenan por JS -->
+        <tbody id="tablaVelas" class="tabladatos">
+          <!-- Filas generadas por JS -->
         </tbody>
       </table>
     </div>
@@ -81,12 +82,13 @@
       </div>
     </div>
   </footer>
+
   <script src="../assets/js/bootstrap.min.js"></script>
-  <script src="js/categorias.js"></script>
+  <script src="js/velas.js"></script>
   <script>
-    cargarCategorias();
+    cargarVelas();
     document.getElementById('btnBuscar').onclick = function() {
-    cargarCategorias(document.getElementById('busqueda').value);
+      cargarVelas(document.getElementById('busqueda').value);
     };
   </script>
 </body>
