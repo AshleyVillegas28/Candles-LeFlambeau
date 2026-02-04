@@ -73,7 +73,12 @@
           Descubre nuestra colección de velas decorativas, aromáticas y
           especiales, elaboradas con dedicación y estilo.
         </p>
+      </section>
 
+      <section
+        class="botones-categorias"
+        style="margin-top: 2rem; display: flex; flex-wrap: wrap; gap: 1rem"
+      >
         <a
           href="catalogo.html"
           style="
@@ -84,14 +89,99 @@
             border-radius: 30px;
             text-decoration: none;
             font-weight: 500;
-            transition: background 0.3s;
+            transition:
+              background 0.3s,
+              transform 0.2s;
+          "
+          onmouseover="
+            this.style.background = '#945c4a';
+            this.style.transform = 'scale(1.05)';
+          "
+          onmouseout="
+            this.style.background = '#7a4a3a';
+            this.style.transform = 'scale(1)';
           "
         >
           Ver Catálogo
         </a>
-        <a href="Ccategoria.html"> Ver Catálogo </a>
-        <a href="Lcategoria.html"> Ver Catálogo </a>
-        <a href="Ecategoria.html"> Ver Catálogo </a>
+
+        <a
+          href="Ccategoria.html"
+          style="
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            background: #4a7a3a;
+            color: #fff;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 500;
+            transition:
+              background 0.3s,
+              transform 0.2s;
+          "
+          onmouseover="
+            this.style.background = '#5c9450';
+            this.style.transform = 'scale(1.05)';
+          "
+          onmouseout="
+            this.style.background = '#4a7a3a';
+            this.style.transform = 'scale(1)';
+          "
+        >
+          Crear Categoría
+        </a>
+
+        <a
+          href="Lcategoria.html"
+          style="
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            background: #3a4a7a;
+            color: #fff;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 500;
+            transition:
+              background 0.3s,
+              transform 0.2s;
+          "
+          onmouseover="
+            this.style.background = '#506094';
+            this.style.transform = 'scale(1.05)';
+          "
+          onmouseout="
+            this.style.background = '#3a4a7a';
+            this.style.transform = 'scale(1)';
+          "
+        >
+          Listar Categoría
+        </a>
+
+        <a
+          href="Ecategoria.html"
+          style="
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            background: #7a3a7a;
+            color: #fff;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 500;
+            transition:
+              background 0.3s,
+              transform 0.2s;
+          "
+          onmouseover="
+            this.style.background = '#945094';
+            this.style.transform = 'scale(1.05)';
+          "
+          onmouseout="
+            this.style.background = '#7a3a7a';
+            this.style.transform = 'scale(1)';
+          "
+        >
+          Editar Categoría
+        </a>
       </section>
     </main>
   </body>
